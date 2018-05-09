@@ -1,0 +1,21 @@
+body {
+    background-color: silver;
+    color: black;
+}
+#homePage {
+    display: flex;
+    
+}
+
+#cardPage {
+    display: flex;
+}
+
+.card {
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    margin: 30px;
+    padding: 30px;
+    width: 50%;
+}
