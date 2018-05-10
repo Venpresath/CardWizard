@@ -2,20 +2,126 @@ body {
     background-color: silver;
     color: black;
 }
+.homePageContent {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+#cardPage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card {
+    border: 1px solid black;
+    margin: 30px;
+    padding: 30px;
+}
+
+.grid{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    flex-wrap: wrap;
+}
+
 #homePage {
     display: flex;
     
 }
 
 #cardPage {
+    position: fixed;
+    top: 50px;
+    width: 50%;
+    left: 25%;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    z-index: 2;
+    background-color: red;  
+}
+
+#playAgain {
     display: flex;
 }
 
-.card {
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    margin: 30px;
-    padding: 30px;
+
+#playAgainButton {
+    position: fixed;
+    top: 200px;
     width: 50%;
+    left: 25%;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    z-index: 2;
+    background-color: grey;
+    font-size: 25px;
+    font-size: 25px;
+}
+
+#exitGame {
+    position: fixed;
+    top: 300px;
+    width: 50%;
+    left: 25%;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    z-index: 2;
+    background-color: grey;
+    font-size: 25px;
+}
+
+#homePage {
+    position: fixed;
+    top: 50px;
+    width: 50%;
+    left: 25%;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 3;
+} 
+
+#startGame {
+    position: fixed;
+    top: 50px;
+    width: 54%;
+    left: 25%;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    z-index: 2;
+    background-color:grey;
+    font-size: 25px;
+}
+
+.front {
+    border: 1px solid black;
+}
+
+.back {
+    border: 1px solid black;
+}
+
+
+
+
+@media only screen and (max-width: 300px) {
+    body {
+        background-color: lightblue;
+    }
 }
