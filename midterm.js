@@ -1,8 +1,15 @@
-document.querySelector("#startGame").addEventListener("click", function () {
-    startGame();
+$(() => {
+    $("#cardPage").hide();
+    $("#playAgain").hide();
+   $("#startGame").click(function(){
+       $("#cardPage").show();
+       $("#cardPage").css("background-color", "#ff000080");
+       startGame();
+   });
 });
 
 function startGame() {
+    document.querySelector("#cardPage").innerHTML = "";
     let guessOne = '';
     let guessTwo = '';
     let count = 0;
@@ -28,6 +35,13 @@ function startGame() {
     grid.setAttribute('class', 'grid');
     game.appendChild(grid);
 
+    function match(){
+        let selected = document.querySelectorAll('.selected');
+        selected.for(selected in selected){
+            card.classList.add('.selected');
+        }
+    }
+
     function shuffle(array) {
         let currentIndex = array.length, temporaryValue, randomIndex;
       
@@ -49,4 +63,9 @@ function startGame() {
         card.classList.add('card');
         grid.appendChild(card);
     }
+
+    //game logic
+
+
+    
 }

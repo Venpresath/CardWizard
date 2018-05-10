@@ -6,6 +6,7 @@ body {
     display: flex;
     width: 80%;
     justify-content: center;
+    margin: auto;
 }
 #startGame{
     border: none;
@@ -26,6 +27,7 @@ body {
 .grid{
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 70%;
     flex-wrap: wrap;
+    margin: auto;
 }
