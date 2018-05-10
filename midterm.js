@@ -7,6 +7,14 @@ $(() => {
      startGame();
  });
 
+ $(".card").click(function(){
+     $(this).removeClass("");
+ });
+
+//  $("button").click(function(){
+//     $("p").removeClass("blackground-color", "white");
+//  });
+
 
 //  $(".card").click(function(){
 //    $(this).show();
@@ -74,5 +82,6 @@ function startGame() {
       card.classList.add('card');
       grid.appendChild(card);
   }
- }
+}
+
 });
