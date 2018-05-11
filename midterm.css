@@ -3,7 +3,6 @@ body {
     background-color: silver;
     color: black;
 }
-<<<<<<< HEAD
 
 
 #cardPage {
@@ -30,9 +29,6 @@ body {
 }
 
 #homePage {
-=======
-.homePageContent {
->>>>>>> 3dd78df232bd10422e340700f79b8dddbfe91031
     display: flex;
     width: 80%;
     justify-content: center;
@@ -46,7 +42,6 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-<<<<<<< HEAD
     background-image: images/url("picture.jpg");
 }
 
@@ -133,20 +128,43 @@ body {
         background-color: black;
 
     }
-=======
 }
 
-.card {
-    border: 1px solid black;
-    margin: 30px;
-    padding: 30px;
+/* The modal css */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: black; 
+    background-color: rgba(0,0,0,0.4);
 }
 
-.grid{
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    flex-wrap: wrap;
+/* Modal Content */
+.modal-content {
+    background-color: rgba(0,0,0, 0.4);
     margin: auto;
->>>>>>> 3dd78df232bd10422e340700f79b8dddbfe91031
+    padding: 20px;
+    border: 1px solid red;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
