@@ -93,24 +93,16 @@ function startGame() {
                 console.log("You win!");
                 //Pop up modal to ask user if they want to play again and run function below:
 
-                
-
+            
                 var modal = document.getElementById('myModal');
-
                 var btn = document.getElementById("myBtn");
-
-
                 var span = document.getElementsByClassName("close")[0];
-
-
                 btn.onclick = function() {
                     modal.style.display = "block";
                 }
-
-                span.onclick = function() {
+                  span.onclick = function() {
                     modal.style.display = "none";
                 }
-
                 window.onclick = function(event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
