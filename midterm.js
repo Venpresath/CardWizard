@@ -1,14 +1,17 @@
 $(() => {
     $("#cardPage").hide();
     $("#playAgain").hide();
-    $("#startGame").click(function () {
+    $("#startGame").click(function(){
+        $("#startGame").hide();
+    });
+
+
+    $("#startGame").click(function(){
         $("#cardPage").show();
         $("#cardPage").css("background-color", "#ff000080");
         startGame();
     });
 });
-
-
 
 
 function startGame() {
@@ -31,11 +34,6 @@ function startGame() {
 
     const game = document.querySelector("#cardPage");
     // const gameUpdate = document.querySelector(".gameUpdate"); //create HTML tag with .gameUpdate tag to store messages.
-
-
-   let gameUpdate = document.getElementsByTagName("gameUpdate").innerHTML = "";
-  
-
     const grid = document.createElement('section');
     const gameGrid = cardObjects.concat(cardObjects);
     console.log(gameGrid);
@@ -61,7 +59,7 @@ function startGame() {
         let card = document.createElement("div");
         card.innerHTML = `<p id="${gameGrid[i].name}">${gameGrid[i].name}</p>`;
         card.classList.add('card');
-        card.classList.add('cardback');
+        card.classList.add('cardBack');
         grid.appendChild(card);
     }
 
@@ -71,16 +69,7 @@ function startGame() {
     let loseCount = 3;
     let guesses = [];
 
-
-
     //Make it so the player can only select one card at a time.
-
-
-        while (selectedcard > 1) {
-            console.log(`${guesses} selected, please try again`)
-            i++;
-        }
-
     let selectedCard = $(".card").on("click", function () {
         selectedCard = $(this).find('p').text();
         guesses.push(selectedCard);
@@ -88,56 +77,25 @@ function startGame() {
         if (guesses.length === 2 && guesses[0] === guesses[1]) {
             console.log("correct!");
             winCount--
-            if (winCount === 0) {
-                // gameUpdate.innerHTML = `<p>You Win!!</p>`; //update .gameUpdate tag here.
+            if (winCount === 0) {  
+
+                $("#playAgainButton").show(); 
+                $("#cancel").show();
+
                 console.log("You win!");
+
                 //Pop up modal to ask user if they want to play again and run function below:
-
-            
-                var modal = document.getElementById('myModal');
-                var btn = document.getElementById("myBtn");
-                var span = document.getElementsByClassName("close")[0];
-                btn.onclick = function() {
-                    modal.style.display = "block";
-                }
-                  span.onclick = function() {
-                    modal.style.display = "none";
-                }
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-                
-
-
-
 
 
                 startGame();
             }
-
-            
         } else if (guesses.length === 2 && guesses[0] !== guesses[1]) {
-                
-            $("").css("bacground-color", "black");
-                $("").animate({}, 3000, function(){
-                
-                }
-            
-
-
             //if the cards don't match, make sure they flip down after 3 seconds (3000 ms)
             console.log(`<p>try again, you have ${loseCount} times left</p>`); //delete this when you get the gameUpdate tag done.
             loseCount--
             // gameUpdate.innerHTML = `<p>try again, you have ${loseCount} times left</p>`; //update .gameUpdate tag here.
             if (loseCount === 0) {
                 console.log("please try again");
-                
-
-
-
-                //ask user if they want to play again and run function below:
                 startGame();
             }
         }
