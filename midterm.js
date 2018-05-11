@@ -9,8 +9,6 @@ $(() => {
 });
 
 
-
-
 function startGame() {
     document.querySelector("#cardPage").innerHTML = "";
 
@@ -56,7 +54,7 @@ function startGame() {
         let card = document.createElement("div");
         card.innerHTML = `<p id="${gameGrid[i].name}">${gameGrid[i].name}</p>`;
         card.classList.add('card');
-        card.classList.add('cardback');
+        card.classList.add('cardBack');
         grid.appendChild(card);
     }
 
