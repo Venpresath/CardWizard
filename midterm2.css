@@ -1,0 +1,123 @@
+body {
+    color: black;
+}
+@font-face {
+    font-family: LifeCraft;
+    src: url('/LifeCraft_Font.ttf');
+}
+h1 {
+    font-size: 25vw;
+    font-family: LifeCraft;
+    text-shadow: 3px 3px rgb(45, 161, 238);
+    position: relative;
+    left: 25rem;
+    margin: 0px;
+}
+#homePage {
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+.homePageContent {
+    display: flex;
+    height: 550px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+#startGame {
+    height: 75px;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 300px;
+    border: 3px solid rgb(45, 161, 238);
+    color: white;
+    background-image: url('../wiz.jpg');
+    height: 75px;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 300px;
+    font-family: LifeCraft;
+}
+#startGame:hover {
+    border: 3px solid rgb(45, 161, 238)
+    
+}
+/* Flex-Container*/
+#cardPage {
+    height: 550px;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/* Flex-Items */
+.card {
+    margin: 30px;
+    padding: 30px;
+    height: 100px;
+    width: 100px;
+    background: url('frost.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+.grid{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 75%;
+    flex-wrap: wrap;
+    margin: auto;
+    background: url('wiz.jpg');
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+}
+.cardBack{
+    background: url('cardback.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+ }
+
+ .gameUpdate{
+     margin: auto;
+ }
+ 
+ .cardBack.active{
+    background: none;
+ }
+@media only screen and (min-width: 375px) {
+    #cardPage {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+    }
+    .grid {
+        height: 55%;
+        display: flex;
+    }
+    .card {
+        width: 25%;
+        margin: 0px;
+        padding: 0px;
+        height: 50%;
+    }
+    /* p {
+        color: white;
+        font-size: 25px;
+        z-index: -2;
+    } */
+    h1 {
+        text-align: center;
+        font-size: 8vw;
+        display: inline;
+    }
+    
+}
+
